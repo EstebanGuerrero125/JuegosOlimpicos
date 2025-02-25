@@ -14,17 +14,29 @@ import java.util.*;
 public class Evento {
     int Id;
     String nombre;
-    Date fecha;
+    String lugar;
+    String fecha;
+    
 
     public Evento() {
     }
 
-    public Evento(int Id, String nombre, Date fecha) {
+    public Evento(int Id, String nombre, String lugar, String fecha) {
         this.Id = Id;
         this.nombre = nombre;
+        this.lugar = lugar;
         this.fecha = fecha;
     }
 
+    public String getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+   
     public int getId() {
         return Id;
     }
@@ -41,11 +53,11 @@ public class Evento {
         this.nombre = nombre;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
     
