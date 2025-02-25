@@ -86,7 +86,7 @@ public class DeportistaDAO {
             ps.setString(1, d.getDni());
             ps.setString(2, d.getNombre());
             ps.setString(3, d.getPais());
-            ps.setString(4, d.getId());
+            ps.setInt(4, d.getId());
             ps.executeUpdate();
         } catch (SQLException e) {
             System.out.println("Error al actualizar: " + e.getMessage());

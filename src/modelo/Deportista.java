@@ -9,7 +9,7 @@ package modelo;
  * @author user
  */
 public class Deportista {
-    String Id;
+    int Id;
     String Dni;
     String nombre;
     String pais;
@@ -17,18 +17,20 @@ public class Deportista {
     public Deportista() {
     }
 
-    public Deportista(String Id, String Dni, String nombre, String pais) {
+    public Deportista(int Id, String Dni, String nombre, String pais) {
         this.Id = Id;
         this.Dni = Dni;
         this.nombre = nombre;
         this.pais = pais;
     }
 
-    public String getId() {
+    
+
+    public int getId() {
         return Id;
     }
 
-    public void setId(String Id) {
+    public void setId(int Id) {
         this.Id = Id;
     }
 
