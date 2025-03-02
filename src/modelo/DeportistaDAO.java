@@ -72,9 +72,11 @@ public class DeportistaDAO {
             ps.setString(2, c.getNombre());
             ps.setString(3, c.getPais());
             ps.executeUpdate();
+            System.out.println("Registro exitoso");
         } catch (SQLException e) {
             System.out.println("Error al agregar: " + e.getMessage());
         }
+        
         return r;
     }
 

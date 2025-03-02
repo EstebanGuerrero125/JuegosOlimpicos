@@ -34,6 +34,21 @@ public class Controlador {
         switch(elegir) {
             case 1 -> {
                 System.out.println("Buena la rata:1 " );
+                Deportista dep = new Deportista();
+                DeportistaDAO depdao = new DeportistaDAO();
+                
+                System.out.println("Ingrese por favor el DNI del deportista");
+                String dni = sc.next();
+                System.out.println("Ingrese por favor el nombre del deportista");
+                String nombre = sc.next();
+                System.out.println("Ingrese por favor el pais del deportista");
+                String pais =sc.next();
+                
+                dep.setDni(dni);
+                dep.setNombre(nombre);
+                dep.setPais(pais);
+                depdao.agregar(dep);
+                
                 
             }
             case 2 -> System.out.println("Buena la ra:2");
