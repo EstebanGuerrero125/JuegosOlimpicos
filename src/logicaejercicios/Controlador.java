@@ -51,7 +51,24 @@ public class Controlador {
                 
                 
             }
-            case 2 -> System.out.println("Buena la ra:2");
+            case 2 -> {
+                System.out.println("Buena la ra:2");
+                Evento event = new Evento();
+                EventoDAO eventdao = new EventoDAO();
+                
+                System.out.println("Ingrese por favor el nombre del evento");
+                String nombre = sc.next();
+                System.out.println("Ingrese por favor el lugar del evento");
+                String lugar = sc.next();
+                System.out.println("Ingrese por favor la fecha del evento");
+                String fecha =sc.next();
+            
+                event.setNombre(nombre);
+                event.setLugar(lugar);
+                event.setFecha(fecha);
+                eventdao.agregar(event);
+                
+            }
             default -> System.out.println("Opción no válida");
         }
 
