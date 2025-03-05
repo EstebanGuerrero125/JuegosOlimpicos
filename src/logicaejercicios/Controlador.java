@@ -71,7 +71,14 @@ public class Controlador {
             }
             
             case 3 ->{
+                Participaciones part = new Participaciones();
                 System.out.println("Ingrese el DNI del participante");
+                int dniParticipacion = sc.nextInt();
+                part.setDni(dniParticipacion);
+                System.out.println("Ingrese el nombre del evento");
+                String eventoParticipacion = sc.next();
+                part.setEvento(eventoParticipacion);
+                
                 
             }
             default -> System.out.println("Opción no válida");
