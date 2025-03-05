@@ -69,6 +69,11 @@ public class Controlador {
                 eventdao.agregar(event);
                 
             }
+            
+            case 3 ->{
+                System.out.println("Ingrese el DNI del participante");
+                
+            }
             default -> System.out.println("Opción no válida");
         }
 
