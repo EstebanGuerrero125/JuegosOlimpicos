@@ -10,22 +10,22 @@ package modelo;
  */
 public class Participaciones {
     
-    int dni;
+    String dni;
     String evento;
 
     public Participaciones() {
     }
 
-    public Participaciones(int dni, String evento) {
+    public Participaciones(String dni, String evento) {
         this.dni = dni;
         this.evento = evento;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
