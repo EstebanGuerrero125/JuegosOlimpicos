@@ -17,7 +17,7 @@ public class Controlador {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         
         System.out.println("Bienvenido a los juegos olímpicos 2026");
         
@@ -86,6 +86,10 @@ public class Controlador {
                     cont = sc.nextInt();
                 
                 }while(cont != 1);
+                
+                System.out.println("Simuando evento...");
+                Thread.sleep(2000);
+                
 
             }
             default -> System.out.println("Opción no válida");

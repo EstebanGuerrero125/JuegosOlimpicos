@@ -39,4 +39,25 @@ public class ParticipacionesDAO {
         return r;
     }
     
+    public List simular(){
+        //
+        String sql= "SELECT * FROM participaciones ORDER BY RAND() ;";
+        List<Participaciones> lista = new ArrayList<>();
+
+        try {
+            con = cn.Conexion();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Participaciones d = new Participaciones();
+                d.setDni(rs.getString(1));
+                d.setEvento(rs.getString(2));
+                lista.add(d);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al listar: " + e.getMessage());
+        }
+        return lista;
+    }
+    
 }
