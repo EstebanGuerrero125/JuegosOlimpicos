@@ -26,7 +26,7 @@ public class ParticipacionesDAO {
     
     
     public int agregar(Participaciones p) {
-        String sql = "INSERT INTO participaciones (Dni, Evento,) VALUES(?,?)";
+        String sql = "INSERT INTO participaciones (Dni, Evento) VALUES(?,?)";
         try {
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
@@ -40,8 +40,14 @@ public class ParticipacionesDAO {
     }
     
     public List simular(){
-        //
-        String sql= "SELECT * FROM participaciones ORDER BY RAND() ;";
+    /*  
+        SELECT d.nombre, d.pais, p.evento 
+        FROM deportista d  
+        JOIN participaciones p ON d.dni = p.dni  
+        ORDER BY RAND();
+    */
+        
+        String sql= " SELECT d.nombre, d.pais, p.evento FROM deportista d JOIN participaciones p ON d.dni = p.dni ORDER BY RAND() ";
         List<Participaciones> lista = new ArrayList<>();
 
         try {
@@ -49,10 +55,11 @@ public class ParticipacionesDAO {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Participaciones d = new Participaciones();
-                d.setDni(rs.getString(1));
-                d.setEvento(rs.getString(2));
-                lista.add(d);
+                Participaciones p = new Participaciones();
+                p.setDeporNombre(rs.getString(1));
+                p.setDeporPais(rs.getString(2));
+                p.setEvento(rs.getString(3));
+                lista.add(p);
             }
         } catch (SQLException e) {
             System.out.println("Error al listar: " + e.getMessage());

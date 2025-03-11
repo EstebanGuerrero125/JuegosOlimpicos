@@ -64,7 +64,7 @@ public class DeportistaDAO {
     }
 
     public int agregar(Deportista c) {
-        String sql = "INSERT INTO deportista (Dni, Nombre, Pais) VALUES(?,?,?)";
+        String sql = "INSERT INTO deportista (Dni, Nombre, Pais) VALUES(?,?,?) ";
         try {
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
