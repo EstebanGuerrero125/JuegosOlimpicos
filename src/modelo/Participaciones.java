@@ -67,7 +67,7 @@ public class Participaciones {
     }
     
      public String toString() {
-        return "Nombre: " + deporNombre + " Pais: " + deporPais +" Evento: " + evento ;
+        return "    Nombre: " + deporNombre + " \n     Pais: " + deporPais +"\n     Evento: " + evento ;
     }
     
     

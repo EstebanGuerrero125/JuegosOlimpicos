@@ -26,12 +26,7 @@ public class Controlador {
 
         System.out.println("Bienvenido a los juegos olímpicos 2026");
 
-        System.out.println("-----Menu--------- \n"
-                + "| 1. Agregar deportista       | \n"
-                + "| 2. Agregar evento           | \n"
-                + "| 3. Simular evento           | \n"
-                + "| 4. Ver premiacion           | \n"
-                + "| 5. Mostar ranking de paises | \n");
+       
         
         
         controlador.menu();
@@ -41,6 +36,14 @@ public class Controlador {
     }
     
         void menu() throws InterruptedException{
+            
+            
+             System.out.println("-----Menu--------- \n"
+                + "| 1. Agregar deportista       | \n"
+                + "| 2. Agregar evento           | \n"
+                + "| 3. Simular evento           | \n"
+                + "| 4. Mostar ranking de paises | \n");
+             
         System.out.print("Ingrese una opcion: ");
         int elegir = sc.nextInt();
         
@@ -129,10 +132,17 @@ public class Controlador {
                 //System.out.println("PUESTO# NOMBRE DEPORTISTA PAIS DEPORTISTA----EVENTO");
 
                 for (int i = 0; i < listaParti.size(); i++) {
-                    System.out.println( "Puesto: "+ i+ " - "+ listaParti.get(i)  );
+                    int j=i+1;
+                    System.out.println( "\n Puesto: ->"+ j + "\n"+ listaParti.get(i)  );
                 }
 
                 controlador.menu();    
+            }
+            
+            case 4 -> {
+                System.out.println("Rankin de paises con mas medallas ganadas:\n ");
+                
+            
             }
             default ->{
                   System.out.println("Opción no válida");
